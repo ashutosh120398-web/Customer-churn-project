@@ -1,0 +1,392 @@
+{
+ "rows": 7043,
+ "cols": 21,
+ "blank_total": 11,
+ "dups": 0,
+ "churn_rate": 26.54,
+ "churned": 1869,
+ "avg_monthly_churn": 74.44,
+ "avg_monthly_stay": 61.27,
+ "med_tenure_churn": 10.0,
+ "med_tenure_stay": 38.0,
+ "monthly_rev_lost": 139131.0,
+ "monthly_rev_total": 456117.0,
+ "rates": {
+  "gender": {
+   "Female": [
+    26.9,
+    3488
+   ],
+   "Male": [
+    26.2,
+    3555
+   ]
+  },
+  "SeniorCitizen": {
+   "0": [
+    23.6,
+    5901
+   ],
+   "1": [
+    41.7,
+    1142
+   ]
+  },
+  "Partner": {
+   "No": [
+    33.0,
+    3641
+   ],
+   "Yes": [
+    19.7,
+    3402
+   ]
+  },
+  "Dependents": {
+   "No": [
+    31.3,
+    4933
+   ],
+   "Yes": [
+    15.5,
+    2110
+   ]
+  },
+  "PhoneService": {
+   "No": [
+    24.9,
+    682
+   ],
+   "Yes": [
+    26.7,
+    6361
+   ]
+  },
+  "MultipleLines": {
+   "No": [
+    25.0,
+    3390
+   ],
+   "No phone service": [
+    24.9,
+    682
+   ],
+   "Yes": [
+    28.6,
+    2971
+   ]
+  },
+  "InternetService": {
+   "DSL": [
+    19.0,
+    2421
+   ],
+   "Fiber optic": [
+    41.9,
+    3096
+   ],
+   "No": [
+    7.4,
+    1526
+   ]
+  },
+  "OnlineSecurity": {
+   "No": [
+    41.8,
+    3498
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    14.6,
+    2019
+   ]
+  },
+  "OnlineBackup": {
+   "No": [
+    39.9,
+    3088
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    21.5,
+    2429
+   ]
+  },
+  "DeviceProtection": {
+   "No": [
+    39.1,
+    3095
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    22.5,
+    2422
+   ]
+  },
+  "TechSupport": {
+   "No": [
+    41.6,
+    3473
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    15.2,
+    2044
+   ]
+  },
+  "StreamingTV": {
+   "No": [
+    33.5,
+    2810
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    30.1,
+    2707
+   ]
+  },
+  "StreamingMovies": {
+   "No": [
+    33.7,
+    2785
+   ],
+   "No internet service": [
+    7.4,
+    1526
+   ],
+   "Yes": [
+    29.9,
+    2732
+   ]
+  },
+  "Contract": {
+   "Month-to-month": [
+    42.7,
+    3875
+   ],
+   "One year": [
+    11.3,
+    1473
+   ],
+   "Two year": [
+    2.8,
+    1695
+   ]
+  },
+  "PaperlessBilling": {
+   "No": [
+    16.3,
+    2872
+   ],
+   "Yes": [
+    33.6,
+    4171
+   ]
+  },
+  "PaymentMethod": {
+   "Bank transfer (automatic)": [
+    16.7,
+    1544
+   ],
+   "Credit card (automatic)": [
+    15.2,
+    1522
+   ],
+   "Electronic check": [
+    45.3,
+    2365
+   ],
+   "Mailed check": [
+    19.1,
+    1612
+   ]
+  }
+ },
+ "tenure_band": {
+  "0-12": 47.4,
+  "13-24": 28.7,
+  "25-48": 20.4,
+  "49-72": 9.5
+ },
+ "charge_band": {
+  "<35": 10.9,
+  "35-70": 23.9,
+  "70-90": 37.8,
+  "90+": 32.8
+ },
+ "n_features": 30,
+ "models": {
+  "Logistic Regression": {
+   "accuracy": 0.738,
+   "precision": 0.504,
+   "recall": 0.783,
+   "f1": 0.614,
+   "roc_auc": 0.842,
+   "cv_auc": 0.846
+  },
+  "Decision Tree": {
+   "accuracy": 0.735,
+   "precision": 0.5,
+   "recall": 0.807,
+   "f1": 0.618,
+   "roc_auc": 0.831,
+   "cv_auc": 0.824
+  },
+  "Random Forest": {
+   "accuracy": 0.76,
+   "precision": 0.533,
+   "recall": 0.783,
+   "f1": 0.634,
+   "roc_auc": 0.844,
+   "cv_auc": 0.847
+  },
+  "Gradient Boosting": {
+   "accuracy": 0.798,
+   "precision": 0.655,
+   "recall": 0.508,
+   "f1": 0.572,
+   "roc_auc": 0.842,
+   "cv_auc": 0.847
+  }
+ },
+ "best": "Random Forest",
+ "cm": [
+  [
+   778,
+   257
+  ],
+  [
+   81,
+   293
+  ]
+ ],
+ "rf_imp": {
+  "tenure": 0.177,
+  "Contract_Two year": 0.127,
+  "TotalCharges": 0.127,
+  "InternetService_Fiber optic": 0.082,
+  "MonthlyCharges": 0.081,
+  "PaymentMethod_Electronic check": 0.06,
+  "Contract_One year": 0.045,
+  "OnlineSecurity_Yes": 0.039,
+  "TechSupport_Yes": 0.026,
+  "TechSupport_No internet service": 0.024,
+  "OnlineSecurity_No internet service": 0.02,
+  "DeviceProtection_No internet service": 0.019
+ },
+ "lr_coef": {
+  "Contract_Two year": -1.41,
+  "tenure": -1.16,
+  "Contract_One year": -0.72,
+  "MonthlyCharges": -0.55,
+  "PhoneService_Yes": -0.35,
+  "OnlineSecurity_Yes": -0.33,
+  "TechSupport_Yes": -0.27,
+  "MultipleLines_Yes": 0.32,
+  "PaperlessBilling_Yes": 0.34,
+  "StreamingTV_Yes": 0.4,
+  "PaymentMethod_Electronic check": 0.4,
+  "StreamingMovies_Yes": 0.42,
+  "TotalCharges": 0.49,
+  "InternetService_Fiber optic": 1.22
+ },
+ "threshold": [
+  [
+   0.2,
+   0.387,
+   0.955,
+   0.551
+  ],
+  [
+   0.25,
+   0.409,
+   0.922,
+   0.567
+  ],
+  [
+   0.3,
+   0.435,
+   0.896,
+   0.585
+  ],
+  [
+   0.35,
+   0.456,
+   0.882,
+   0.601
+  ],
+  [
+   0.4,
+   0.48,
+   0.85,
+   0.614
+  ],
+  [
+   0.45,
+   0.508,
+   0.821,
+   0.628
+  ],
+  [
+   0.5,
+   0.533,
+   0.783,
+   0.634
+  ],
+  [
+   0.55,
+   0.555,
+   0.717,
+   0.625
+  ],
+  [
+   0.6,
+   0.58,
+   0.658,
+   0.617
+  ],
+  [
+   0.65,
+   0.631,
+   0.594,
+   0.612
+  ],
+  [
+   0.7,
+   0.668,
+   0.521,
+   0.586
+  ],
+  [
+   0.75,
+   0.69,
+   0.388,
+   0.497
+  ],
+  [
+   0.8,
+   0.75,
+   0.313,
+   0.442
+  ]
+ ],
+ "top20_capture": 50.8,
+ "top20_monthly": 21711.0,
+ "corr_tenure": -0.35,
+ "corr_monthly": 0.19
+}
